@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name ="wwwnopcommerce" parallel ="tests" thread-count="3">
+
+<listeners>
+
+    <listener  class-name="wwwnopcom.Util.ExtentReportManager"/>
+
+        </listeners>
+
+    <test name="chrome">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="wwwnopcom.TestCases.LoginTest_01" />
+
+                   </classes>
+    </test>
+
+
+     <test name="ff">
+        <parameter name="browser" value="ff" />
+        <classes>
+            <class name="wwwnopcom.TestCases.LoginTest_01" />
+        </classes>
+    </test>
+
+
+
+    <test name="ie">
+        <parameter name="browser" value="ie" />
+        <classes>
+            <class name="wwwnopcom.TestCases.LoginTest_01"  />
+        </classes>
+    </test>  -->
+
+
+
+</suite>

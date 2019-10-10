@@ -31,9 +31,10 @@ public class Base {
 
 
     @BeforeClass
+    @Parameters("browser")
 
 
-    public void initialization( ) {
+    public void initialization(String br ) throws IOException {
         //configproperty file code
         try {
             prop = new Properties( );
@@ -52,7 +53,7 @@ public class Base {
 
         //setup
 
-        String br = prop.getProperty( "browser" );
+       // String br = prop.getProperty( "browser" );
 
         //Opens browser
         if (br.equals("firefox")) {
