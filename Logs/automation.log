@@ -1,0 +1,5 @@
+2019-10-09 06:24:31,190  INFO [main] wwwnopcom01:19 - ************  LoginTest***********
+2019-10-09 06:24:36,873  INFO [main] wwwnopcom01:25 - ***********Username***********
+2019-10-09 06:24:42,741  INFO [main] wwwnopcom01:33 - *********Title test**********
+2019-10-09 06:24:42,759 ERROR [main] wwwnopcom01:46 - Title mismatch
+2019-10-09 06:24:42,759  WARN [main] wwwnopcom01:47 - Dashboard / nopCommerce administration
