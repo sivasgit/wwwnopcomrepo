@@ -4,6 +4,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import java.io.IOException;
 import java.io.ObjectInputFilter;
 import java.text.SimpleDateFormat;
@@ -30,13 +31,13 @@ public class ExtentReportManager extends TestListenerAdapter {
 
         htmlReporter.config().setDocumentTitle("nopCommerce Automation Report"); // Tile of report
         htmlReporter.config().setReportName("nopCommerce  Functional Testing"); // name of the report
-        htmlReporter.config().setTheme(Theme.DARK);
+        htmlReporter.config().setTheme( Theme.DARK );
 
         extent=new ExtentReports();
         extent.attachReporter(htmlReporter);
         extent.setSystemInfo("Host name","localhost");
         extent.setSystemInfo("Environemnt","QA");
-        extent.setSystemInfo("user","pavan");
+        extent.setSystemInfo("user","siva");
 
     }
 
@@ -51,7 +52,8 @@ public class ExtentReportManager extends TestListenerAdapter {
         test=extent.createTest(result.getName()); // create new entry in th report
 
         test.log(Status.FAIL, "TEST CASE FAILED IS " + result.getName()); // to add name in extent report
-        test.log( ObjectInputFilter.Status.FAIL, "TEST CASE FAILED IS " + result.getThrowable( ) ); // to add error/exception in extent report
+
+        test.log( Status.FAIL, "TEST CASE FAILED IS " + result.getThrowable( ) ); // to add error/exception in extent report
 
         String screenshotPath=System.getProperty("user.dir")+"\\Screenshots\\"+result.getName()+".png";
         try {
