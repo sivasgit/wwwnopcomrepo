@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">   <listeners>
+        <listener class-name="Util.ExtentReportManager">
+
+
+        </listener>
+    </listeners>
+
+    <test verbose="2" preserve-order="true" name="C:/Users/siva/IdeaProjects/wwwnopcom">
+        <classes>
+            <class name="TestCases.LoginTest_01">
+                <methods>
+                    <include name="loginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
